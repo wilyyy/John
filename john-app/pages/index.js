@@ -16,6 +16,8 @@ export default function Home() {
       <Button />
       <Button text="Create Event"/>
 
+      <Button width="10rem" height="2.5rem" bgcolor="#111F1C" borderradius="3rem" fontsize="1.5rem" text="Login"/>
+
       
     </div>
   )
