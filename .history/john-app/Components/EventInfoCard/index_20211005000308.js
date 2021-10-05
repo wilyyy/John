@@ -28,7 +28,6 @@ const EventInfoBottom = styled.div`
     flex-direction: column;
     background-color: #141414;
     color: #fff;
-    padding: 0.5rem;
 `;
 
 const H1 = styled.h1`
@@ -62,7 +61,7 @@ const EventInfoCard = ({
             </H1>
         </EventInfoTop>
         <EventInfoBottom>
-            <H2>{h1_eventname}</H2>
+            <H1>{h1_eventname}</H1>
         </EventInfoBottom>
     </EventInfoCardCont>
 }

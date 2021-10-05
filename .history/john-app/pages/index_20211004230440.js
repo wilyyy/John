@@ -3,7 +3,6 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Button from '@/Components/Button'
 import EventInfoCard from '@/Components/EventInfoCard'
-import styled from 'styled-components';
 
 
 const ExampleCont = styled.div`

@@ -28,7 +28,6 @@ const EventInfoBottom = styled.div`
     flex-direction: column;
     background-color: #141414;
     color: #fff;
-    padding: 0.5rem;
 `;
 
 const H1 = styled.h1`
@@ -49,7 +48,7 @@ const EventInfoCard = ({
     h2top_color = "#fff",
     h1_time = "12:30pm",
     h1_light = "300",
-    h1_eventname = "Binge Squid Game"
+    h1_eventname = "Binge Squad Game"
 }) => {
     return <EventInfoCardCont>
         <EventInfoTop>
@@ -62,7 +61,7 @@ const EventInfoCard = ({
             </H1>
         </EventInfoTop>
         <EventInfoBottom>
-            <H2>{h1_eventname}</H2>
+            <H1></H1>
         </EventInfoBottom>
     </EventInfoCardCont>
 }
