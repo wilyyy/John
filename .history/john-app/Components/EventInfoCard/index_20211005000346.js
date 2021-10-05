@@ -28,7 +28,7 @@ const EventInfoBottom = styled.div`
     flex-direction: column;
     background-color: #141414;
     color: #fff;
-    padding: 0.5rem;
+    padding: 2rem;
 `;
 
 const H1 = styled.h1`

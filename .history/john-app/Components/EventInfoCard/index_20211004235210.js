@@ -9,7 +9,6 @@ const EventInfoCardCont = styled.div`
 `;
 
 const EventInfoTop = styled.div`
-    font-family: 'Roboto', sans-serif;
     width: 15rem;
     height: 21rem;
     border-radius: 1rem 1rem 0 0;
@@ -28,13 +27,11 @@ const EventInfoBottom = styled.div`
     flex-direction: column;
     background-color: #141414;
     color: #fff;
-    padding: 0.5rem;
 `;
 
 const H1 = styled.h1`
     color: #fff;
-    font-family: ${props=>props.h1font};
-    font-weight: ${props=>props.h1fontweight};
+    font-family: 'Roboto', sans-serif;
 `;
 
 const H2 = styled.h2`
@@ -43,26 +40,19 @@ const H2 = styled.h2`
 `;
 
 const EventInfoCard = ({
-    h1_day = "29",
-    h1_ubuntu = "'Ubuntu', sans-serif",
-    toph2_day = "Thursday",
-    h2top_color = "#fff",
-    h1_time = "12:30pm",
-    h1_light = "300",
-    h1_eventname = "Binge Squid Game"
+    h1_text = "29",
+    toph2_text = "Thursday",
+    h2top_color = "#fff"
 }) => {
     return <EventInfoCardCont>
         <EventInfoTop>
-            <H1>{h1_day}</H1>
+            <H1>{h1_text}</H1>
             <H2 h2color={h2top_color}>
-                {toph2_day}
+                {toph2_text}
             </H2>
-            <H1 h1font={h1_ubuntu} h1fontweight={h1_light}>
-                {h1_time}
-            </H1>
         </EventInfoTop>
         <EventInfoBottom>
-            <H2>{h1_eventname}</H2>
+
         </EventInfoBottom>
     </EventInfoCardCont>
 }
