@@ -47,9 +47,7 @@ const Nav = () => {
             <JohnLogo>John</JohnLogo>
             <NavLinkRow>
                 <NavItem>calendar</NavItem>
-                <Divider />
                 <NavItem>cost splitter</NavItem>
-                <Divider />
                 <NavItem>friends</NavItem>
             </NavLinkRow>
         </NavRow>

@@ -1,0 +1,14 @@
+import styled from 'styled-components';
+import {useRouter} from 'next/router';
+import React, {useState} from 'react';
+
+const NavCont = styled.div`
+    display: flex;
+    width: 100%;
+`;
+
+const Nav = () => {
+    return <NavCont>
+        
+    </NavCont>
+}
