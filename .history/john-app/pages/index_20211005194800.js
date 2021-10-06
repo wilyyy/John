@@ -8,7 +8,7 @@ import styled from 'styled-components';
 
 const ExampleCont = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 `;
 
 export default function Home() {
@@ -22,12 +22,7 @@ export default function Home() {
 
 
       <EventInfoCard />
-      <EventInfoCard 
-        topborder="#3FC284 5px solid" 
-        topbgcolor="#fff"
-        h1_color = "#387C5C"
-        h2top_color="#387C5C"
-      />
+      <EventInfoCard />
       <Button />
       <Button text="Create Event"/>
 
