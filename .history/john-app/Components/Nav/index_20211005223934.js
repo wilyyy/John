@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 import {useRouter} from 'next/router';
 import React, {useState} from 'react';
-import Image from 'next/image';
-import profilePic from '@/Photos/avatar.jpg';
 
 const NavCont = styled.div`
     display: flex;
@@ -18,7 +16,7 @@ const NavCont = styled.div`
 const NavRow = styled.div`
     display: flex;
     justify-content: space-between;
-    padding: 0 2rem;
+    padding: 0 1rem;
 `;
 
 const NavLinkRow = styled.div`
@@ -43,15 +41,9 @@ const Divider = styled.div`
     height: 3rem;
 `;
 
-const AvatarCont = styled.div`
-    border-radius: 25rem;
-    width: 4rem;
-    height: 4rem;
-    overflow: hidden;
-    position: relative;
-    top: -1rem;
-`;
+const AvatarCont = styled.div``;
 
+const Avatar = styled.img``;
 
 const Nav = () => {
     return <NavCont>
@@ -63,9 +55,6 @@ const Nav = () => {
                 <NavItem>cost splitter</NavItem>
                 <Divider />
                 <NavItem>friends</NavItem>
-                <AvatarCont>
-                    <Image src={profilePic} />
-                </AvatarCont>
             </NavLinkRow>
         </NavRow>
     </NavCont>
