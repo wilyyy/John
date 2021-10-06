@@ -21,8 +21,6 @@ const NavRow = styled.div`
 
 const NavLinkRow = styled.div`
     display: flex;
-    justify-content: space-evenly;
-    width: 600px;
 `;
 
 const JohnLogo = styled.a`
@@ -36,20 +34,13 @@ const NavItem = styled.a`
     color: #726767;
 `;
 
-const Divider = styled.div`
-    border-left: 2px #726767 solid;
-    height: 3rem;
-`;
-
 const Nav = () => {
     return <NavCont>
         <NavRow>
             <JohnLogo>John</JohnLogo>
             <NavLinkRow>
                 <NavItem>calendar</NavItem>
-                <Divider />
                 <NavItem>cost splitter</NavItem>
-                <Divider />
                 <NavItem>friends</NavItem>
             </NavLinkRow>
         </NavRow>

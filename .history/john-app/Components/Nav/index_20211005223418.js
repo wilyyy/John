@@ -36,10 +36,7 @@ const NavItem = styled.a`
     color: #726767;
 `;
 
-const Divider = styled.div`
-    border-left: 2px #726767 solid;
-    height: 3rem;
-`;
+const Divider = styled.div``;
 
 const Nav = () => {
     return <NavCont>
@@ -47,9 +44,7 @@ const Nav = () => {
             <JohnLogo>John</JohnLogo>
             <NavLinkRow>
                 <NavItem>calendar</NavItem>
-                <Divider />
                 <NavItem>cost splitter</NavItem>
-                <Divider />
                 <NavItem>friends</NavItem>
             </NavLinkRow>
         </NavRow>

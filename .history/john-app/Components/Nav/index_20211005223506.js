@@ -50,6 +50,7 @@ const Nav = () => {
                 <Divider />
                 <NavItem>cost splitter</NavItem>
                 <Divider />
+
                 <NavItem>friends</NavItem>
             </NavLinkRow>
         </NavRow>

@@ -49,7 +49,6 @@ const Nav = () => {
                 <NavItem>calendar</NavItem>
                 <Divider />
                 <NavItem>cost splitter</NavItem>
-                <Divider />
                 <NavItem>friends</NavItem>
             </NavLinkRow>
         </NavRow>
