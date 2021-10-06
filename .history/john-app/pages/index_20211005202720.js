@@ -8,7 +8,7 @@ import styled from 'styled-components';
 
 const ExampleCont = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 `;
 
 export default function Home() {

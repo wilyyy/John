@@ -37,7 +37,7 @@ const EventInfoBottom = styled.div`
 `;
 
 const H1 = styled.h1`
-    color: ${props=>props.h1color};
+    color: #fff;
     font-family: ${props=>props.h1font};
     font-weight: ${props=>props.h1fontweight};
 `;
@@ -53,9 +53,8 @@ const cont = styled.div`
 `;
 
 const EventInfoCard = ({
-    topborder = "none", /* prop we change */
-    topbgcolor = "linear-gradient(195.27deg, #3FC284 8.37%, #59AB84 86.66%)", /* prop we change */
-    h1_color = "#fff",
+    topborder = "none",
+    topbgcolor = "linear-gradient(195.27deg, #3FC284 8.37%, #59AB84 86.66%)",
     h1_day = "29", /* prop we change */
     h1_ubuntu = "'Ubuntu', sans-serif",
     toph2_day = "Thursday", /* prop we change */
@@ -69,15 +68,11 @@ const EventInfoCard = ({
 }) => {
     return <EventInfoCardCont>
         <EventInfoTop topbgcolor={topbgcolor} topborder={topborder}>
-            <H1 h1color={h1_color}>{h1_day}</H1>
+            <H1>{h1_day}</H1>
             <H2 h2color={h2top_color}>
                 {toph2_day}
             </H2>
-            <H1 
-            h1font={h1_ubuntu} 
-            h1fontweight={h1_light}
-            h1color={h1_color}
-            >
+            <H1 h1font={h1_ubuntu} h1fontweight={h1_light}>
                 {h1_time}
             </H1>
         </EventInfoTop>

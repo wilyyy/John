@@ -16,12 +16,11 @@ const EventInfoTop = styled.div`
     width: 20rem;
     height: 26rem;
     border-radius: 1rem 1rem 0 0;
-    border: ${props=>props.topborder};
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: ${props=>props.topbgcolor};
+    background: linear-gradient(195.27deg, #3FC284 8.37%, #59AB84 86.66%);
 `;
 
 const EventInfoBottom = styled.div`
@@ -37,7 +36,7 @@ const EventInfoBottom = styled.div`
 `;
 
 const H1 = styled.h1`
-    color: ${props=>props.h1color};
+    color: #fff;
     font-family: ${props=>props.h1font};
     font-weight: ${props=>props.h1fontweight};
 `;
@@ -53,31 +52,24 @@ const cont = styled.div`
 `;
 
 const EventInfoCard = ({
-    topborder = "none", /* prop we change */
-    topbgcolor = "linear-gradient(195.27deg, #3FC284 8.37%, #59AB84 86.66%)", /* prop we change */
-    h1_color = "#fff",
-    h1_day = "29", /* prop we change */
+    h1_day = "29", /* can change */
     h1_ubuntu = "'Ubuntu', sans-serif",
     toph2_day = "Thursday", /* prop we change */
     h2top_color = "#fff",
-    h1_time = "12:30pm", /* prop we change */
+    h1_time = "12:30pm", /* can change */
     h1_light = "300",
-    h2_eventname = "Binge Squid Game", /* prop we change */
+    h2_eventname = "Binge Squid Game", /* can change */
     h2_eventcolor = "#FF7A00",
-    location = "Building of Density", /* prop we change */
-    number_of_people = "5+ People Involved" /* prop we change */
+    location = "Building of Density", /* can change */
+    number_of_people = "5+ People Involved" /* can change */
 }) => {
     return <EventInfoCardCont>
-        <EventInfoTop topbgcolor={topbgcolor} topborder={topborder}>
-            <H1 h1color={h1_color}>{h1_day}</H1>
+        <EventInfoTop>
+            <H1>{h1_day}</H1>
             <H2 h2color={h2top_color}>
                 {toph2_day}
             </H2>
-            <H1 
-            h1font={h1_ubuntu} 
-            h1fontweight={h1_light}
-            h1color={h1_color}
-            >
+            <H1 h1font={h1_ubuntu} h1fontweight={h1_light}>
                 {h1_time}
             </H1>
         </EventInfoTop>
