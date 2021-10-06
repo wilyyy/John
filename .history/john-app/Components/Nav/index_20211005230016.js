@@ -49,7 +49,7 @@ const AvatarCont = styled.div`
     height: 4rem;
     overflow: hidden;
     position: relative;
-    top: -1rem;
+    top: 1rem;
 `;
 
 
