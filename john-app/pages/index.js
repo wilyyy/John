@@ -5,6 +5,7 @@ import Button from '@/Components/Button'
 import EventInfoCard from '@/Components/EventInfoCard'
 import Nav from '@/Components/Nav'
 import styled from 'styled-components';
+import TaskCard from '@/Components/TaskCard'
 
 
 const ExampleCont = styled.div`
@@ -21,6 +22,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Nav />
+
+      <TaskCard />
 
       <EventInfoCard />
       <EventInfoCard 
