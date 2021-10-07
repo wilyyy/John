@@ -73,7 +73,7 @@ const EventInfoCard = ({
             <H2 h2color={h2top_color}>
                 {toph2_day}
             </H2>
-            <H1 
+            <H1
             h1font={h1_ubuntu} 
             h1fontweight={h1_light}
             h1color={h1_color}
