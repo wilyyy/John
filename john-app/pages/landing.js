@@ -37,7 +37,7 @@ const MidSection = styled.div
 
 const Heading = styled.h1
 `
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Ubuntu, sans-serif;
     font-weight: 700;
     font-size: 5rem;
     color: #FFF; 
@@ -46,7 +46,7 @@ const Heading = styled.h1
 
 const Description = styled.p
 `
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Ubuntu, sans-serif;
     font-size: 2rem;
     font-weight: 400;
     color: #FFF;
