@@ -26,7 +26,6 @@ const CalendarPageRow = styled.div`
     width: 75rem;
     height: 35rem;
     justify-content: space-between;
-    align-items: center;
 `;
 
 const Divider = styled.div`
@@ -50,8 +49,8 @@ export default function Calendar(){
                     <TaskCard />
                     <Divider />
                     <CalendarWithHeader>
-                        <h1>Calendar</h1>
-                        <JohnCalendar />
+                    <h1>Calendar</h1>
+                    <JohnCalendar />
                     </CalendarWithHeader>
                 </CalendarPageRow>
             </CalendarPageCont>
