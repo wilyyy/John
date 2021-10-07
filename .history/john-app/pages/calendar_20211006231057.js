@@ -26,7 +26,6 @@ const CalendarPageRow = styled.div`
     width: 75rem;
     height: 35rem;
     justify-content: space-between;
-    align-items: center;
 `;
 
 const Divider = styled.div`
