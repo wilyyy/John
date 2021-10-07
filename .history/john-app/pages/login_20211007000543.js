@@ -25,6 +25,13 @@ const LoginHeader = styled.h1`
     color: white;
 `
 
+const SocialMediaCont = styled.div`
+    display: flex;
+    width: 800px;
+    justify-content: center;
+    align-items: center;
+`;
+
 export default function Login()
 {
     return (
@@ -32,7 +39,9 @@ export default function Login()
             <LoginHeaderContainer>
                 <LoginHeader>Log In</LoginHeader>
             </LoginHeaderContainer>
-            <SocialMediaIcon />
+            <SocialMediaCont>
+                <Image src="/SociaMedia.png/" width="400px" height="500px"/>
+            </SocialMediaCont>
         </LoginContainer>
     )
 }
