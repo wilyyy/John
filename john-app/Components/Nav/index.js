@@ -12,7 +12,6 @@ const NavCont = styled.div`
     height: 6rem;
     font-family: 'Lora', serif;
     background: linear-gradient(180deg, #E8F5E6 90.62%, rgba(208, 227, 205, 0) 100%);
-    border-bottom: #726767 1px solid;
 `;
 
 const NavRow = styled.div`
