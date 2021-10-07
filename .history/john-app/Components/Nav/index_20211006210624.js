@@ -37,7 +37,7 @@ const JohnLogo = styled.button`
 `;
 
 const NavItem = styled.button`
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: #726767;
     font-family: 'Lora', serif;
     border:none;
@@ -66,9 +66,9 @@ const Nav = () => {
             <NavLinkRow>
                 <NavItem>calendar</NavItem>
                 <Divider />
-                <NavItem>3 day forecast</NavItem>
-                <Divider />
                 <NavItem>cost splitter</NavItem>
+                <Divider />
+                <NavItem>3 day forecast</NavItem>
                 <AvatarCont>
                     <Image src={profilePic} />
                 </AvatarCont>
