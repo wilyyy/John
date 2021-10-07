@@ -5,10 +5,9 @@ import 'react-calendar/dist/Calendar.css';
 import styled from 'styled-components';
 
 const CalendarCont = styled.div`
-    width: 1000px;
+    width: 300px;
     border: 1px solid #f0f0f0;
     border-radius: 2px;
-    background-color: #000;
 `;
 
 
@@ -18,7 +17,6 @@ const JohnCalendar = () => {
     const onChange = (date) => {
         setDate(date);
     }
-
     return <div>
         <Calendar
         onChange={onChange}

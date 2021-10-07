@@ -24,7 +24,7 @@ const JohnCalendar = () => {
         onChange={onChange}
         value={date}
         />
-    </div>
+    </CalendarCont>
 }
 
 export default JohnCalendar
