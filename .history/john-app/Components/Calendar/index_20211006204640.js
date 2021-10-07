@@ -3,6 +3,10 @@ import { render } from "react-dom";
 import Calendar from "react-calendar";
 import 'react-calendar/dist/Calendar.css';
 
+const CalendarCont = style.div`
+    
+`;
+
 const JohnCalendar = () => {
     const [date, setDate] = useState(new Date());
 

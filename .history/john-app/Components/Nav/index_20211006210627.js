@@ -66,9 +66,9 @@ const Nav = () => {
             <NavLinkRow>
                 <NavItem>calendar</NavItem>
                 <Divider />
-                <NavItem>3 day forecast</NavItem>
-                <Divider />
                 <NavItem>cost splitter</NavItem>
+                <Divider />
+                <NavItem>3 day forecast</NavItem>
                 <AvatarCont>
                     <Image src={profilePic} />
                 </AvatarCont>
