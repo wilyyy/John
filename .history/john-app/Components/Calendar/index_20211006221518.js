@@ -19,12 +19,12 @@ const JohnCalendar = () => {
         setDate(date);
     }
 
-    return <div>
+    return <CalendarCont>
         <Calendar
         onChange={onChange}
         value={date}
         />
-    </div>
+    </CalendarCont>
 }
 
 export default JohnCalendar
