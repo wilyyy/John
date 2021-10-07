@@ -58,16 +58,21 @@ const AvatarCont = styled.div`
 `;
 
 
-const Nav = () => {
+const Nav = ({
+    homeRoute = "/calendar",
+    forecastRoute = "/forecast",
+    costSplitterRoute = "/costsplitter"
+}) => {
+    const router = useRouter();
     return <NavCont>
         <NavRow>
-            <JohnLogo>John</JohnLogo>
+            <JohnLogo onClick={()=>router.push(homeRoute)}>John</JohnLogo>
             <NavLinkRow>
-                <NavItem>calendar</NavItem>
+                <NavItem onClick={()=>router.push(homeRoute)}>calendar</NavItem>
                 <Divider />
-                <NavItem>3 day forecast</NavItem>
+                <NavItem onClick={()=>router.push(forecastRoute)}>3 day forecast</NavItem>
                 <Divider />
-                <NavItem>cost splitter</NavItem>
+                <NavItem onClick={()=>router.push(costSplitterRoute)}>cost splitter</NavItem>
                 <AvatarCont>
                     <Image src={profilePic} />
                 </AvatarCont>
