@@ -3,7 +3,6 @@ import {useRouter} from 'next/router';
 import React, {useState} from 'react';
 import AddIcon from '@mui/icons-material/Add';
 
-//maybe change this to an array instead of an object?
 const tasks = {
     task1: "Team meeting at 5:00pm",
     task2: "Play Volleyball at 6:00pm",
@@ -45,6 +44,14 @@ const TaskBotCont = styled.div`
     align-items: center;
 `;
 
+const H1 = styled.h1`
+    color: #fff;
+`;
+
+const H2 = styled.h2`
+    color: #fff;
+`;
+
 const H3 = styled.h3`
     color: #000;
     text-decoration: underline;
@@ -66,6 +73,10 @@ const Divider = styled.div`
     width: 18rem;
     height: 2px;
 `;
+
+// const CreatEvent = styled.div`
+    
+// `;
 
 const CreateEventLink = styled.button`
     height: 5rem;

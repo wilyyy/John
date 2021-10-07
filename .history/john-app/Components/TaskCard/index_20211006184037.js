@@ -3,7 +3,6 @@ import {useRouter} from 'next/router';
 import React, {useState} from 'react';
 import AddIcon from '@mui/icons-material/Add';
 
-//maybe change this to an array instead of an object?
 const tasks = {
     task1: "Team meeting at 5:00pm",
     task2: "Play Volleyball at 6:00pm",

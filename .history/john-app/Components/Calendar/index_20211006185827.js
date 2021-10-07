@@ -8,12 +8,7 @@ const JohnCalendar = () => {
     const onChange = (date) => {
         setDate(date);
     }
-    return <div>
-        <Calendar
-        onChange={onChange}
-        value={date}
-        />
-    </div>
+    return <div></div>
 }
 
 export default JohnCalendar
