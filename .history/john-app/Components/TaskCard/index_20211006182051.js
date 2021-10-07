@@ -107,10 +107,10 @@ const TaskCard = ({
                 <Li>{tasks.task4}</Li>       
             </Ul>
             <Divider />
-                
-            <CreateEventLink>
-                <AddIcon />Create New Event
-                </CreateEventLink>
+            <CreatEvent>
+                <AddIcon />
+                <CreateEventLink>Create New Event</CreateEventLink>
+            </CreatEvent>
         </TaskBotCont>
     </TaskCont>
 }

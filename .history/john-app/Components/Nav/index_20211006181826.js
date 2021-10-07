@@ -28,9 +28,8 @@ const NavLinkRow = styled.div`
 `;
 
 const JohnLogo = styled.button`
-    font-family: 'Lora', serif;
-    border:none;
-    background: none;
+font-family: 'Lora', serif;
+
     font-size: 3rem;
     font-weight: bold;
     color: #000;
@@ -39,9 +38,6 @@ const JohnLogo = styled.button`
 const NavItem = styled.button`
     font-size: 2rem;
     color: #726767;
-    font-family: 'Lora', serif;
-    border:none;
-    background: none;
 `;
 
 const Divider = styled.div`

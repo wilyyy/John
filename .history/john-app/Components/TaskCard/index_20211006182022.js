@@ -74,14 +74,13 @@ const Divider = styled.div`
     height: 2px;
 `;
 
-// const CreatEvent = styled.div`
-    
-// `;
-
-const CreateEventLink = styled.button`
+const CreatEvent = styled.div`
     height: 5rem;
     display: flex;
     align-items: center;
+`;
+
+const CreateEventLink = styled.button`
     font-family: 'Roboto', sans-serif;
     border:none;
     background: none;
@@ -107,10 +106,10 @@ const TaskCard = ({
                 <Li>{tasks.task4}</Li>       
             </Ul>
             <Divider />
-                
-            <CreateEventLink>
-                <AddIcon />Create New Event
-                </CreateEventLink>
+            <CreatEvent>
+                <AddIcon />
+                <CreateEventLink>Create New Event</CreateEventLink>
+            </CreatEvent>
         </TaskBotCont>
     </TaskCont>
 }
