@@ -108,9 +108,7 @@ const TaskCard = ({
             </Ul>
             <Divider />
                 
-            <CreateEventLink>
-                <AddIcon />Create New Event
-                </CreateEventLink>
+                <CreateEventLink><AddIcon />Create New Event</CreateEventLink>
         </TaskBotCont>
     </TaskCont>
 }

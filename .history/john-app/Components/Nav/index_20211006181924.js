@@ -39,7 +39,6 @@ const JohnLogo = styled.button`
 const NavItem = styled.button`
     font-size: 2rem;
     color: #726767;
-    font-family: 'Lora', serif;
     border:none;
     background: none;
 `;

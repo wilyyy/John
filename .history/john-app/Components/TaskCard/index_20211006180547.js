@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import {useRouter} from 'next/router';
 import React, {useState} from 'react';
-import AddIcon from '@mui/icons-material/Add';
 
 const tasks = {
     task1: "Team meeting at 5:00pm",
@@ -57,36 +56,7 @@ const H3 = styled.h3`
     text-decoration: underline;
 `;
 
-const Ul = styled.ul`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: centerl
-`;
-
-const Li = styled.li`
-    font-size: 1.25rem;
-`;
-
-const Divider = styled.div`
-    border-bottom: 2px #000 solid;
-    width: 18rem;
-    height: 2px;
-`;
-
-// const CreatEvent = styled.div`
-    
-// `;
-
-const CreateEventLink = styled.button`
-    height: 5rem;
-    display: flex;
-    align-items: center;
-    font-family: 'Roboto', sans-serif;
-    border:none;
-    background: none;
-    font-size: 1.25rem;
-`;
+const Li = styled.li``;
 
 
 const TaskCard = ({
@@ -98,19 +68,14 @@ const TaskCard = ({
             <H1>{day_number}</H1>
             <H2>{day}</H2>
         </TaskTopCont>
-        <TaskBotCont>   
-            <H3>Current Tasks</H3>    
-            <Ul>
-                <Li>{tasks.task1}</Li>
-                <Li>{tasks.task2}</Li>
-                <Li>{tasks.task3}</Li>
-                <Li>{tasks.task4}</Li>       
-            </Ul>
-            <Divider />
-                
-            <CreateEventLink>
-                <AddIcon />Create New Event
-                </CreateEventLink>
+        <TaskBotCont>
+            <H3>Current Tasks</H3>
+            <ul>
+                <li>{tasks.task1}</li>
+                <li>{tasks.task1}</li>
+                <li>{tasks.task1}</li>
+                <li>{tasks.task1}</li>
+            </ul>
         </TaskBotCont>
     </TaskCont>
 }
