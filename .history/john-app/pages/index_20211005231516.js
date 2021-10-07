@@ -4,9 +4,8 @@ import styles from '../styles/Home.module.css'
 import Button from '@/Components/Button'
 import EventInfoCard from '@/Components/EventInfoCard'
 import Nav from '@/Components/Nav'
-// import StaticDatePickerLandscape from '@/Components/Calendar'
+import StaticDatePickerLandscape from '@/Components/Calendar'
 import styled from 'styled-components';
-import TaskCard from '@/Components/TaskCard'
 
 
 const ExampleCont = styled.div`
@@ -23,8 +22,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Nav />
+      <Nav />
 
-      <TaskCard />
 
       <EventInfoCard />
       <EventInfoCard 

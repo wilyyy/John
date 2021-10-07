@@ -6,7 +6,6 @@ import EventInfoCard from '@/Components/EventInfoCard'
 import Nav from '@/Components/Nav'
 // import StaticDatePickerLandscape from '@/Components/Calendar'
 import styled from 'styled-components';
-import TaskCard from '@/Components/TaskCard'
 
 
 const ExampleCont = styled.div`
@@ -23,8 +22,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Nav />
+      <Nav />
+      <StaticDatePickerLandscape />
 
-      <TaskCard />
 
       <EventInfoCard />
       <EventInfoCard 
