@@ -6,7 +6,7 @@ import EventInfoCard from '@/Components/EventInfoCard'
 import Nav from '@/Components/Nav'
 import styled from 'styled-components';
 import TaskCard from '@/Components/TaskCard'
-import JohnCalendar from '@/Components/Calendar'
+import Calendar from '@/Components/Calendar'
 
 
 const ExampleCont = styled.div`
@@ -23,8 +23,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Nav />
-      
-      <JohnCalendar />
+
       <TaskCard />
 
       <EventInfoCard />

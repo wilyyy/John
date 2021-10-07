@@ -11,7 +11,7 @@ const JohnCalendar = () => {
     return <div>
         <Calendar
         onChange={onChange}
-        value={date}
+        value={value}
         />
     </div>
 }

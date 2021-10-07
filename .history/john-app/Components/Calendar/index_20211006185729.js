@@ -4,16 +4,7 @@ import Calendar from "react-calendar";
 
 const JohnCalendar = () => {
     const [date, setDate] = useState(new Date());
-
-    const onChange = (date) => {
-        setDate(date);
-    }
-    return <div>
-        <Calendar
-        onChange={onChange}
-        value={date}
-        />
-    </div>
+    return <div></div>
 }
 
 export default JohnCalendar
