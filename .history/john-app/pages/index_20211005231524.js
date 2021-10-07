@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css'
 import Button from '@/Components/Button'
 import EventInfoCard from '@/Components/EventInfoCard'
 import Nav from '@/Components/Nav'
-// import StaticDatePickerLandscape from '@/Components/Calendar'
+import StaticDatePickerLandscape from '@/Components/Calendar'
 import styled from 'styled-components';
 
 
@@ -23,6 +23,7 @@ export default function Home() {
       </Head>
       <Nav />
       <Nav />
+      <StaticDatePickerLandscape />
 
 
       <EventInfoCard />

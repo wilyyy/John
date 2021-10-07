@@ -23,6 +23,7 @@ export default function Home() {
       </Head>
       <Nav />
       <Nav />
+      <StaticDatePickerLandscape />
 
 
       <EventInfoCard />
