@@ -29,7 +29,7 @@ const Button = ({
     borderradius = "1rem",
     bgcolor = "#FF7A00",
     fontsize = "3rem",
-    routeTo="/calendar"
+    routeTo="/title"
 }) =>{
     const router = useRouter();
     return <ButtonCont
@@ -39,7 +39,6 @@ const Button = ({
         borderradius = {borderradius}
         bgcolor = {bgcolor}
         fontsize = {fontsize}
-        onClick={()=>router.push(routeTo)}
     >
         <ButtonText>{text}</ButtonText>
     </ButtonCont>

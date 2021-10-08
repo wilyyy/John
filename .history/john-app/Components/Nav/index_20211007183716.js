@@ -1,0 +1,84 @@
+import styled from 'styled-components';
+import {useRouter} from 'next/router';
+import React, {useState} from 'react';
+import Image from 'next/image';
+import profilePic from '@/Photos/avatar.jpg';
+
+const NavCont = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+    height: 6rem;
+    font-family: 'Lora', serif;
+    background: linear-gradient(180deg, #E8F5E6 90.62%, rgba(208, 227, 205, 0) 100%);
+`;
+
+const NavRow = styled.div`
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+`;
+
+const NavLinkRow = styled.div`
+    display: flex;
+    justify-content: space-evenly;
+    width: 600px;
+`;
+
+const JohnLogo = styled.button`
+    font-family: 'Lora', serif;
+    border:none;
+    background: none;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #000;
+`;
+
+const NavItem = styled.button`
+    font-size: 1.5rem;
+    color: #726767;
+    font-family: 'Lora', serif;
+    border:none;
+    background: none;
+`;
+
+const Divider = styled.div`
+    border-left: 2px #726767 solid;
+    height: 3rem;
+`;
+
+const AvatarCont = styled.div`
+    border-radius: 25rem;
+    width: 4rem;
+    height: 4rem;
+    overflow: hidden;
+    position: relative;
+    top: -1rem;
+`;
+
+
+const Nav = ({
+    homeRoute = "/calendar",
+    forecastRoute = "/forecast",
+    costSplitterRoute = "/costsplitter"
+}) => {
+    const router = useRouter();
+    return <NavCont>
+        <NavRow>
+            <JohnLogo onClick={()=>router.push(homeRoute)}>John</JohnLogo>
+            <NavLinkRow>
+                <NavItem onClick={()=>router.push(homeRoute)}>calendar</NavItem>
+                <Divider />
+                <NavItem onClick={()=>router.push(forecastRoute)}>3 day forecast</NavItem>
+                <Divider />
+                <NavItem onClick={()=>router.push(costSplitterRoute)}>cost splitter</NavItem>
+                <AvatarCont>
+                    <Image src={profilePic} />
+                </AvatarCont>
+            </NavLinkRow>
+        </NavRow>
+    </NavCont>
+}
+
+export default Nav;
