@@ -6,8 +6,6 @@ import { TextField } from "@mui/material";
 import styles from '@/styles/Home.module.css';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import BackButton from "@/Components/BackButton";
-import {useRouter} from 'next/router';
-
 
 const MainCont = styled.div
 `
@@ -64,8 +62,7 @@ padding-right: 20px;
 const LogInFormCont = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    height: 8rem;
+    justify-content: center;
     width: 70%;
 `
 
@@ -78,7 +75,7 @@ justify-content: row;
 `
 
 const ForgotPass = styled.h4`
-color: #FF7A00;
+color: #fff;;
 `;
 
 const Dorito = styled.img
@@ -92,6 +89,7 @@ const Dorito = styled.img
 `;
 
 export default function Login(){
+    const router = useRouter();
     return (
         <MainCont>
             <Dorito src="/dorito.png"/>
@@ -108,6 +106,7 @@ export default function Login(){
             </BreakLineCont>
             <LogInFormCont>
                 <TextField fullWidth label="Email" id="fullWidth" variant="filled" className={styles.ImBlacked}/>
+                <Spacer />
                 <TextField fullWidth label="Password" type="password" id="fullWidth" variant="filled" className={styles.ImBlacked}/>
             </LogInFormCont>
             <ForgotPass>Forgot Password?</ForgotPass>

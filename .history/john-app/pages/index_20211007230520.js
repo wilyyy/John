@@ -80,7 +80,7 @@ export default function Landing()
           </Head>
           <Dorito src="/dorito.png"/>
           <TopBar>
-            <Button width="10rem" height="2.5rem" bgcolor="#111F1C" borderradius="3rem" fontsize="1.5rem" text="Login" routeTo="/calendar"/>
+            <Button width="10rem" height="2.5rem" bgcolor="#111F1C" borderradius="3rem" fontsize="1.5rem" text="Login" routeTo="/login"/>
           </TopBar>
           <MidSection>
             <Image src="/john.svg" alt="John" width="400px" height="400px" />

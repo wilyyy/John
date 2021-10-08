@@ -5,9 +5,7 @@ import SocialMediaIcon from "@/Components/SocialMediaIcon";
 import { TextField } from "@mui/material";
 import styles from '@/styles/Home.module.css';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-import BackButton from "@/Components/BackButton";
 import {useRouter} from 'next/router';
-
 
 const MainCont = styled.div
 `
@@ -26,10 +24,9 @@ const MainCont = styled.div
 const LoginContainer = styled.div `
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     align-items: center;
     background-color: #141414;
-    height: 95%;
+    height: 100vh;
     width: 40%;
     border-radius: 32px;
 `;
@@ -64,9 +61,12 @@ padding-right: 20px;
 const LogInFormCont = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    height: 8rem;
+    justify-content: center;
     width: 70%;
+`
+
+const Spacer = styled.div`
+    padding: 10px;
 `
 
 const FatWhiteLine = styled.div`
@@ -78,8 +78,16 @@ justify-content: row;
 `
 
 const ForgotPass = styled.h4`
-color: #FF7A00;
-`;
+color: blue;
+`
+
+const BackButtCont = styled.div`
+display: flex;
+width: 100%;
+justify-content: flex-start;
+padding-top: 25px;
+padding-left: 25px;
+`
 
 const Dorito = styled.img
 `
@@ -89,29 +97,43 @@ const Dorito = styled.img
     right: -200px;
     position: absolute;
     z-index: -1;
-`;
 
-export default function Login(){
+`
+
+export default function Login()
+{
+    const router = useRouter();
     return (
         <MainCont>
             <Dorito src="/dorito.png"/>
         <LoginContainer>
-            <BackButton />
+            <BackButtCont>
+                <ArrowBackIosIcon className={styles.icon} onClick={() => router.back()}/>
+            </BackButtCont>
             <LoginHeaderContainer>
                 <LoginHeader>Log In</LoginHeader>
             </LoginHeaderContainer>
             <SocialMediaIcon />
+            <Spacer/>
+            <Spacer/>
             <BreakLineCont>
-                <FatWhiteLine />
-                    <TheWordOR>OR</TheWordOR>
-                <FatWhiteLine />
+            <FatWhiteLine />
+                <TheWordOR>OR</TheWordOR>
+            <FatWhiteLine />
             </BreakLineCont>
+            <Spacer />
+            <Spacer />
             <LogInFormCont>
                 <TextField fullWidth label="Email" id="fullWidth" variant="filled" className={styles.ImBlacked}/>
+                <Spacer />
                 <TextField fullWidth label="Password" type="password" id="fullWidth" variant="filled" className={styles.ImBlacked}/>
             </LogInFormCont>
             <ForgotPass>Forgot Password?</ForgotPass>
-            <Button text="Continue" routeTo="/calendar"/>
+            <Spacer />
+            <Spacer />
+            <Spacer />
+            <Spacer />
+            <Button text="Continue"/>
         </LoginContainer>
         </MainCont>
     )

@@ -34,6 +34,14 @@ const SignUpContainer = styled.div `
     border-radius: 32px;
 `;
 
+const SignUpHeaderContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    padding-left: 25px;
+`;
+
 const SignUpHeader = styled.h1`
     font-size: 4rem;
     color: white;
