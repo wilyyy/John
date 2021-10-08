@@ -1,0 +1,55 @@
+[
+    {
+        "day_number": "29",
+        "day": "Thursday",
+        "time": "12:30pm",
+        "event_name": "Binge Squid Game",
+        "location": "Watch Squid Game with the bois",
+        "number_of_people": "5+ people involved"
+    },
+
+    {
+        "day_number": "30",
+        "day": "Friday",
+        "time": "12:30pm",
+        "event_name": "Binge Squid Game",
+        "description": "Watch Squid Game with the bois",
+        "number_of_people": "5+ people involved"
+    },
+
+    {
+        "day_number": "1",
+        "day": "Saturday",
+        "time": "12:30pm",
+        "event_name": "Binge Squid Game",
+        "description": "Watch Squid Game with the bois",
+        "number_of_people": "5+ people involved"
+    },
+
+    {
+        "day_number": "2",
+        "day": "Thursday",
+        "time": "12:30pm",
+        "event_name": "Binge Squid Game",
+        "description": "Watch Squid Game with the bois",
+        "number_of_people": "5+ people involved"
+    },
+
+    {
+        "day_number": "3",
+        "day": "Thursday",
+        "time": "12:30pm",
+        "event_name": "Binge Squid Game",
+        "description": "Watch Squid Game with the bois",
+        "number_of_people": "5+ people involved"
+    },
+
+    {
+        "day_number": "4",
+        "day": "Thursday",
+        "time": "12:30pm",
+        "event_name": "Binge Squid Game",
+        "description": "Watch Squid Game with the bois",
+        "number_of_people": "5+ people involved"
+    } 
+]
