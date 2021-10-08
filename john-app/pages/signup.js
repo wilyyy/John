@@ -6,17 +6,31 @@ import { TextField } from "@mui/material";
 import styles from '@/styles/Home.module.css';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 
-
-const LoginContainer = styled.div `
+const MainCont = styled.div
+`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(225deg, #067A53, #3FC284);
+    padding: 20px;
+    overflow: hidden;
+    position: relative;
+    z-index: -2;
+    `
+    
+    const SignUpContainer = styled.div `
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #141414;
     height: 100vh;
     width: 40%;
+    border-radius: 32px;
 `;
 
-const LoginHeaderContainer = styled.div`
+const SignUpHeaderContainer = styled.div`
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -24,7 +38,7 @@ const LoginHeaderContainer = styled.div`
     padding-left: 25px;
 `;
 
-const LoginHeader = styled.h1`
+const SignUpHeader = styled.h1`
     font-size: 4rem;
     color: white;
     padding: 25px;
@@ -43,7 +57,7 @@ padding-left: 20px;
 padding-right: 20px;
 `
 
-const LogInFormCont = styled.div`
+const SignUpFormCont = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -70,16 +84,29 @@ padding-top: 25px;
 padding-left: 25px;
 `
 
+const Dorito = styled.img
+`
+    width: 1600px;
+    height: 1300px;
+    bottom: -400px;
+    right: -200px;
+    position: absolute;
+    z-index: -1;
+
+`
+
 export default function Login()
 {
     return (
-        <LoginContainer>
+        <MainCont>
+            <Dorito src="/dorito.png"/>
+        <SignUpContainer>
             <BackButtCont>
                 <ArrowBackIosIcon className={styles.icon} />
             </BackButtCont>
-            <LoginHeaderContainer>
-                <LoginHeader>Sign Up</LoginHeader>
-            </LoginHeaderContainer>
+            <SignUpHeaderContainer>
+                <SignUpHeader>Sign Up</SignUpHeader>
+            </SignUpHeaderContainer>
             <SocialMediaIcon />
             <Spacer/>
             <Spacer/>
@@ -90,7 +117,7 @@ export default function Login()
             </BreakLineCont>
             <Spacer />
             <Spacer />
-            <LogInFormCont>
+            <SignUpFormCont>
                 <TextField fullWidth label="Username" id="fullWidth" variant="filled" className={styles.ImBlacked}/>
                 <Spacer />
                 <TextField fullWidth label="Email" id="fullWidth" variant="filled" className={styles.ImBlacked}/>
@@ -98,11 +125,12 @@ export default function Login()
                 <TextField fullWidth label="Password" type="password" id="fullWidth" variant="filled" className={styles.ImBlacked}/>
                 <Spacer />
                 <TextField fullWidth label="Confirm Password" type="password" id="fullWidth" variant="filled" className={styles.ImBlacked}/>
-            </LogInFormCont>
+            </SignUpFormCont>
                 <Spacer />
                 <Spacer />
                 <Spacer />
-            <Button text="Continue"/>
-        </LoginContainer>
+            <Button text="Sign Up!"/>
+        </SignUpContainer>
+        </MainCont>
     )
 }

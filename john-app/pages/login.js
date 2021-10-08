@@ -6,6 +6,19 @@ import { TextField } from "@mui/material";
 import styles from '@/styles/Home.module.css';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 
+const MainCont = styled.div
+`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(225deg, #067A53, #3FC284);
+    padding: 20px;
+    overflow: hidden;
+    position: relative;
+    z-index: -2;
+`
 
 const LoginContainer = styled.div `
     display: flex;
@@ -14,6 +27,7 @@ const LoginContainer = styled.div `
     background-color: #141414;
     height: 100vh;
     width: 40%;
+    border-radius: 32px;
 `;
 
 const LoginHeaderContainer = styled.div`
@@ -74,9 +88,22 @@ padding-top: 25px;
 padding-left: 25px;
 `
 
+const Dorito = styled.img
+`
+    width: 1600px;
+    height: 1300px;
+    bottom: -400px;
+    right: -200px;
+    position: absolute;
+    z-index: -1;
+
+`
+
 export default function Login()
 {
     return (
+        <MainCont>
+            <Dorito src="/dorito.png"/>
         <LoginContainer>
             <BackButtCont>
                 <ArrowBackIosIcon className={styles.icon} />
@@ -106,5 +133,6 @@ export default function Login()
             <Spacer />
             <Button text="Continue"/>
         </LoginContainer>
+        </MainCont>
     )
 }
