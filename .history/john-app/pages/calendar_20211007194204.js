@@ -46,7 +46,7 @@ const CalendarWithHeader = styled.div`
 
 `;
 
-export default function Calendar() {
+export default function Calendar(){
     const router = useRouter();
     return (
         <CalendarCont>

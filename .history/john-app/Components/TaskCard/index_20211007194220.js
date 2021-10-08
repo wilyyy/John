@@ -99,9 +99,9 @@ const TaskCard = ({
             </Ul>
             <Divider />
                 
-            <CreateEventLink onClick={()=>router.push(eventCreationRoute)}>
+            <CreateEventLink>
                 <AddIcon />Create New Event
-            </CreateEventLink>
+                </CreateEventLink>
         </TaskBotCont>
     </TaskCont>
 }
