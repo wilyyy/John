@@ -6,8 +6,6 @@ import { TextField } from "@mui/material";
 import styles from '@/styles/Home.module.css';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import BackButton from "@/Components/BackButton";
-import {useRouter} from 'next/router';
-
 
 const MainCont = styled.div
 `
@@ -65,7 +63,7 @@ const LogInFormCont = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 8rem;
+    height: 3rem;
     width: 70%;
 `
 

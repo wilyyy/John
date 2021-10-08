@@ -5,9 +5,6 @@ import SocialMediaIcon from "@/Components/SocialMediaIcon";
 import { TextField } from "@mui/material";
 import styles from '@/styles/Home.module.css';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-import BackButton from "@/Components/BackButton";
-import {useRouter} from 'next/router';
-
 
 const MainCont = styled.div
 `
@@ -21,20 +18,19 @@ const MainCont = styled.div
     overflow: hidden;
     position: relative;
     z-index: -2;
-`
-
-const LoginContainer = styled.div `
+    `
+    
+    const SignUpContainer = styled.div `
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     align-items: center;
     background-color: #141414;
-    height: 95%;
+    height: 100vh;
     width: 40%;
     border-radius: 32px;
 `;
 
-const LoginHeaderContainer = styled.div`
+const SignUpHeaderContainer = styled.div`
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -42,7 +38,7 @@ const LoginHeaderContainer = styled.div`
     padding-left: 25px;
 `;
 
-const LoginHeader = styled.h1`
+const SignUpHeader = styled.h1`
     font-size: 4rem;
     color: white;
     padding: 25px;
@@ -61,14 +57,12 @@ padding-left: 20px;
 padding-right: 20px;
 `
 
-const LogInFormCont = styled.div`
+const SignUpFormCont = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    height: 8rem;
+    justify-content: center;
     width: 70%;
 `
-
 const FatWhiteLine = styled.div`
 display: flex;
 height: 5px;
@@ -77,9 +71,13 @@ background-color: #FFFFFF;
 justify-content: row;
 `
 
-const ForgotPass = styled.h4`
-color: #FF7A00;
-`;
+const BackButtCont = styled.div`
+display: flex;
+width: 100%;
+justify-content: flex-start;
+padding-top: 25px;
+padding-left: 25px;
+`
 
 const Dorito = styled.img
 `
@@ -89,30 +87,41 @@ const Dorito = styled.img
     right: -200px;
     position: absolute;
     z-index: -1;
-`;
 
-export default function Login(){
+`
+
+export default function Login()
+{
     return (
         <MainCont>
             <Dorito src="/dorito.png"/>
-        <LoginContainer>
-            <BackButton />
-            <LoginHeaderContainer>
-                <LoginHeader>Log In</LoginHeader>
-            </LoginHeaderContainer>
+        <SignUpContainer>
+            <BackButtCont>
+                <ArrowBackIosIcon className={styles.icon} />
+            </BackButtCont>
+            <SignUpHeaderContainer>
+                <SignUpHeader>Sign Up</SignUpHeader>
+            </SignUpHeaderContainer>
             <SocialMediaIcon />
             <BreakLineCont>
-                <FatWhiteLine />
-                    <TheWordOR>OR</TheWordOR>
-                <FatWhiteLine />
+            <FatWhiteLine />
+                <TheWordOR>OR</TheWordOR>
+            <FatWhiteLine />
             </BreakLineCont>
-            <LogInFormCont>
+            <SignUpFormCont>
+                <TextField fullWidth label="Username" id="fullWidth" variant="filled" className={styles.ImBlacked}/>
+                <Spacer />
                 <TextField fullWidth label="Email" id="fullWidth" variant="filled" className={styles.ImBlacked}/>
+                <Spacer />
                 <TextField fullWidth label="Password" type="password" id="fullWidth" variant="filled" className={styles.ImBlacked}/>
-            </LogInFormCont>
-            <ForgotPass>Forgot Password?</ForgotPass>
-            <Button text="Continue" routeTo="/calendar"/>
-        </LoginContainer>
+                <Spacer />
+                <TextField fullWidth label="Confirm Password" type="password" id="fullWidth" variant="filled" className={styles.ImBlacked}/>
+            </SignUpFormCont>
+                <Spacer />
+                <Spacer />
+                <Spacer />
+            <Button text="Sign Up!"/>
+        </SignUpContainer>
         </MainCont>
     )
 }

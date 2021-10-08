@@ -1,8 +1,7 @@
-import Head from 'next/head'
-import Image from 'next/image'
+import Button from "@/Components/Button";
 import styled from 'styled-components';
+import Image from 'next/image'
 import SocialMediaIcon from "@/Components/SocialMediaIcon";
-import Button from '@/Components/Button';
 import { TextField } from "@mui/material";
 import styles from '@/styles/Home.module.css';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
@@ -21,9 +20,9 @@ const MainCont = styled.div
     overflow: hidden;
     position: relative;
     z-index: -2;
-`;
-
-const SignUpContainer = styled.div `
+    `
+    
+    const SignUpContainer = styled.div `
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -34,6 +33,14 @@ const SignUpContainer = styled.div `
     border-radius: 32px;
 `;
 
+const SignUpHeaderContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    padding-left: 25px;
+`;
+
 const SignUpHeader = styled.h1`
     font-size: 4rem;
     color: white;
@@ -41,16 +48,16 @@ const SignUpHeader = styled.h1`
 `
 
 const BreakLineCont = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
 `
 
 const TheWordOR = styled.h2`
-    color: #FFFFFF;
-    padding-left: 20px;
-    padding-right: 20px;
+color: #FFFFFF;
+padding-left: 20px;
+padding-right: 20px;
 `
 
 const SignUpFormCont = styled.div`
@@ -61,11 +68,11 @@ const SignUpFormCont = styled.div`
     height: 16rem;
 `
 const FatWhiteLine = styled.div`
-    display: flex;
-    height: 5px;
-    width: 13rem;
-    background-color: #FFFFFF;
-    justify-content: row;
+display: flex;
+height: 5px;
+width: 13rem;
+background-color: #FFFFFF;
+justify-content: row;
 `
 
 const BackButtCont = styled.div`
@@ -84,6 +91,7 @@ const Dorito = styled.img
     right: -200px;
     position: absolute;
     z-index: -1;
+
 `
 
 export default function Login() {
@@ -91,28 +99,30 @@ export default function Login() {
     return (
         <MainCont>
             <Dorito src="/dorito.png"/>
-            <SignUpContainer>
-                <BackButtCont>
-                    <ArrowBackIosIcon className={styles.icon} />
-                </BackButtCont>
+        <SignUpContainer>
+            <BackButtCont>
+                <ArrowBackIosIcon className={styles.icon} />
+            </BackButtCont>
+            <SignUpHeaderContainer>
                 <SignUpHeader>Sign Up</SignUpHeader>
-                <SocialMediaIcon />
-                <BreakLineCont>
-                <FatWhiteLine />
-                    <TheWordOR>OR</TheWordOR>
-                <FatWhiteLine />
-                </BreakLineCont>
-                <SignUpFormCont>
-                    <TextField fullWidth label="Username" id="fullWidth" variant="filled" className={styles.ImBlacked}/>
+            </SignUpHeaderContainer>
+            <SocialMediaIcon />
+            <BreakLineCont>
+            <FatWhiteLine />
+                <TheWordOR>OR</TheWordOR>
+            <FatWhiteLine />
+            </BreakLineCont>
+            <SignUpFormCont>
+                <TextField fullWidth label="Username" id="fullWidth" variant="filled" className={styles.ImBlacked}/>
 
-                    <TextField fullWidth label="Email" id="fullWidth" variant="filled" className={styles.ImBlacked}/>
+                <TextField fullWidth label="Email" id="fullWidth" variant="filled" className={styles.ImBlacked}/>
 
-                    <TextField fullWidth label="Password" type="password" id="fullWidth" variant="filled" className={styles.ImBlacked}/>
+                <TextField fullWidth label="Password" type="password" id="fullWidth" variant="filled" className={styles.ImBlacked}/>
 
-                    <TextField fullWidth label="Confirm Password" type="password" id="fullWidth" variant="filled" className={styles.ImBlacked}/>
-                </SignUpFormCont>
-                <Button text="View All Events" routeTo="/forecast" fontsize="2rem"/>
-            </SignUpContainer>
+                <TextField fullWidth label="Confirm Password" type="password" id="fullWidth" variant="filled" className={styles.ImBlacked}/>
+            </SignUpFormCont>
+            <Button text="Sign Up!" routeTo="/calendar" />
+        </SignUpContainer>
         </MainCont>
     )
 }

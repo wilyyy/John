@@ -5,9 +5,8 @@ import SocialMediaIcon from "@/Components/SocialMediaIcon";
 import { TextField } from "@mui/material";
 import styles from '@/styles/Home.module.css';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-import BackButton from "@/Components/BackButton";
 import {useRouter} from 'next/router';
-
+import BackButton from "@/Components/BackButton";
 
 const MainCont = styled.div
 `
@@ -26,7 +25,7 @@ const MainCont = styled.div
 const LoginContainer = styled.div `
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     background-color: #141414;
     height: 95%;
@@ -64,9 +63,12 @@ padding-right: 20px;
 const LogInFormCont = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    height: 8rem;
+    justify-content: center;
     width: 70%;
+`
+
+const Spacer = styled.div`
+    padding: 10px;
 `
 
 const FatWhiteLine = styled.div`
@@ -78,7 +80,7 @@ justify-content: row;
 `
 
 const ForgotPass = styled.h4`
-color: #FF7A00;
+color: blue;
 `;
 
 const Dorito = styled.img
@@ -92,6 +94,7 @@ const Dorito = styled.img
 `;
 
 export default function Login(){
+    const router = useRouter();
     return (
         <MainCont>
             <Dorito src="/dorito.png"/>
@@ -101,13 +104,18 @@ export default function Login(){
                 <LoginHeader>Log In</LoginHeader>
             </LoginHeaderContainer>
             <SocialMediaIcon />
+            <Spacer/>
+            <Spacer/>
             <BreakLineCont>
-                <FatWhiteLine />
-                    <TheWordOR>OR</TheWordOR>
-                <FatWhiteLine />
+            <FatWhiteLine />
+                <TheWordOR>OR</TheWordOR>
+            <FatWhiteLine />
             </BreakLineCont>
+            <Spacer />
+            <Spacer />
             <LogInFormCont>
                 <TextField fullWidth label="Email" id="fullWidth" variant="filled" className={styles.ImBlacked}/>
+                <Spacer />
                 <TextField fullWidth label="Password" type="password" id="fullWidth" variant="filled" className={styles.ImBlacked}/>
             </LogInFormCont>
             <ForgotPass>Forgot Password?</ForgotPass>

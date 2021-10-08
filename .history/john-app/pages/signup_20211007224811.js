@@ -1,8 +1,8 @@
+import Button from "@/Components/Button";
 import Head from 'next/head'
-import Image from 'next/image'
 import styled from 'styled-components';
+import Image from 'next/image'
 import SocialMediaIcon from "@/Components/SocialMediaIcon";
-import Button from '@/Components/Button';
 import { TextField } from "@mui/material";
 import styles from '@/styles/Home.module.css';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
@@ -32,6 +32,14 @@ const SignUpContainer = styled.div `
     height: 100vh;
     width: 40%;
     border-radius: 32px;
+`;
+
+const SignUpHeaderContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    padding-left: 25px;
 `;
 
 const SignUpHeader = styled.h1`
@@ -84,6 +92,7 @@ const Dorito = styled.img
     right: -200px;
     position: absolute;
     z-index: -1;
+
 `
 
 export default function Login() {
@@ -95,7 +104,9 @@ export default function Login() {
                 <BackButtCont>
                     <ArrowBackIosIcon className={styles.icon} />
                 </BackButtCont>
-                <SignUpHeader>Sign Up</SignUpHeader>
+                <SignUpHeaderContainer>
+                    <SignUpHeader>Sign Up</SignUpHeader>
+                </SignUpHeaderContainer>
                 <SocialMediaIcon />
                 <BreakLineCont>
                 <FatWhiteLine />
@@ -111,7 +122,7 @@ export default function Login() {
 
                     <TextField fullWidth label="Confirm Password" type="password" id="fullWidth" variant="filled" className={styles.ImBlacked}/>
                 </SignUpFormCont>
-                <Button text="View All Events" routeTo="/forecast" fontsize="2rem"/>
+                <Button text="Sign Up!" routeTo="/calendar" />
             </SignUpContainer>
         </MainCont>
     )
