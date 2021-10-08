@@ -46,7 +46,7 @@ const CalendarWithHeader = styled.div`
 
 `;
 
-export default function Calendar() {
+export default function Calendar(){
     const router = useRouter();
     return (
         <CalendarCont>
@@ -64,7 +64,7 @@ export default function Calendar() {
                     <CalendarWithHeader>
                         <h1>Calendar</h1>
                         <JohnCalendar />
-                        <Button text="View All Events" routeTo="/forecast" fontsize="2rem"/>
+                        <Button text="View All Events" routeTo="/forecast" fontsize="2rem'/>
                     </CalendarWithHeader>
                 </CalendarPageRow>
             </CalendarPageCont>

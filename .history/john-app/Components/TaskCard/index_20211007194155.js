@@ -80,8 +80,7 @@ const CreateEventLink = styled.button`
 
 const TaskCard = ({
     day_number = "29",
-    day = "Thursday",
-    eventCreationRoute = "/eventcreation"
+    day = "Thursday"
 }) => {
     const router = useRouter();
     return <TaskCont>
@@ -99,9 +98,9 @@ const TaskCard = ({
             </Ul>
             <Divider />
                 
-            <CreateEventLink onClick={()=>router.push(eventCreationRoute)}>
+            <CreateEventLink>
                 <AddIcon />Create New Event
-            </CreateEventLink>
+                </CreateEventLink>
         </TaskBotCont>
     </TaskCont>
 }
