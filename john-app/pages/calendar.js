@@ -3,6 +3,7 @@ import Nav from '@/Components/Nav'
 import styled from 'styled-components';
 import TaskCard from '@/Components/TaskCard';
 import JohnCalendar from '@/Components/Calendar';
+import Button from '@/Components/Button';
 
 const CalendarCont = styled.div`
     display: flex;
@@ -17,7 +18,7 @@ const CalendarPageCont = styled.div`
     flex-direction: column;
     font-family: 'Ubuntu', sans-serif;
     width: 75rem;
-    height: 40rem; 
+    height: 40rem;
 `;
 
 const CalendarPageRow = styled.div`
@@ -30,6 +31,7 @@ const CalendarPageRow = styled.div`
 
 const Divider = styled.div`
     border-left: 2px black solid;
+    height: 40rem;
     width: 2px;
     height: 35rem;
 `;
@@ -37,6 +39,9 @@ const Divider = styled.div`
 const CalendarWithHeader = styled.div`
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
+    height: 40rem;
+
 `;
 
 export default function Calendar(){
@@ -51,6 +56,7 @@ export default function Calendar(){
                     <CalendarWithHeader>
                         <h1>Calendar</h1>
                         <JohnCalendar />
+                        <Button />
                     </CalendarWithHeader>
                 </CalendarPageRow>
             </CalendarPageCont>
