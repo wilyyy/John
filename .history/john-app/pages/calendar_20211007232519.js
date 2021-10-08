@@ -6,8 +6,24 @@ import TaskCard from '@/Components/TaskCard';
 import JohnCalendar from '@/Components/Calendar';
 import Button from '@/Components/Button';
 import axios from "axios";
-import { useState } from 'react';
 
+const MyCard = (info) => {
+    console.log(info);
+    return <Card
+        style={{margin:10}}
+        status='basic'
+        header={<Text>{info.item.title}</Text>}
+        footer={<Text>{info.item.director}</Text>}>
+        <Image 
+          source={{uri: info.item.movie_banner}}
+          style = {{width: 300, height: 150}}
+          resizeMode="cover"
+        />
+        <Text>
+          {info.item.description}
+        </Text>
+    </Card>
+  }
 
 const CalendarCont = styled.div`
     display: flex;

@@ -6,8 +6,6 @@ import TaskCard from '@/Components/TaskCard';
 import JohnCalendar from '@/Components/Calendar';
 import Button from '@/Components/Button';
 import axios from "axios";
-import { useState } from 'react';
-
 
 const CalendarCont = styled.div`
     display: flex;

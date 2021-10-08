@@ -6,7 +6,15 @@ import TaskCard from '@/Components/TaskCard';
 import JohnCalendar from '@/Components/Calendar';
 import Button from '@/Components/Button';
 import axios from "axios";
-import { useState } from 'react';
+
+const [dates, setDates] = useState(fakeData);
+
+const GetDates = async () => {
+    const result = await axios.get("https://date.nager.at/api/v3/publicholidays/2017/AT");
+    console.log(result.data);
+    setDates(result.data);
+}
+
 
 
 const CalendarCont = styled.div`

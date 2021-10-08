@@ -6,8 +6,13 @@ import TaskCard from '@/Components/TaskCard';
 import JohnCalendar from '@/Components/Calendar';
 import Button from '@/Components/Button';
 import axios from "axios";
-import { useState } from 'react';
 
+const GetFilms = async () => {
+    const result = await axios.get("https://date.nager.at/api/v3/publicholidays/2017/AT");
+    console.log(result.data);
+    setFilms(result.data);
+    setLoad(false);
+}
 
 const CalendarCont = styled.div`
     display: flex;
