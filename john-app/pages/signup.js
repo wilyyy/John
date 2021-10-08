@@ -18,9 +18,9 @@ const MainCont = styled.div
     overflow: hidden;
     position: relative;
     z-index: -2;
-`
-
-const LoginContainer = styled.div `
+    `
+    
+    const SignUpContainer = styled.div `
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -30,7 +30,7 @@ const LoginContainer = styled.div `
     border-radius: 32px;
 `;
 
-const LoginHeaderContainer = styled.div`
+const SignUpHeaderContainer = styled.div`
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -38,7 +38,7 @@ const LoginHeaderContainer = styled.div`
     padding-left: 25px;
 `;
 
-const LoginHeader = styled.h1`
+const SignUpHeader = styled.h1`
     font-size: 4rem;
     color: white;
     padding: 25px;
@@ -57,7 +57,7 @@ padding-left: 20px;
 padding-right: 20px;
 `
 
-const LogInFormCont = styled.div`
+const SignUpFormCont = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -65,7 +65,7 @@ const LogInFormCont = styled.div`
 `
 
 const Spacer = styled.div`
-    padding: 10px;
+    padding: 5px;
 `
 
 const FatWhiteLine = styled.div`
@@ -74,10 +74,6 @@ height: 5px;
 width: 13rem;
 background-color: #FFFFFF;
 justify-content: row;
-`
-
-const ForgotPass = styled.h4`
-color: blue;
 `
 
 const BackButtCont = styled.div`
@@ -104,13 +100,13 @@ export default function Login()
     return (
         <MainCont>
             <Dorito src="/dorito.png"/>
-        <LoginContainer>
+        <SignUpContainer>
             <BackButtCont>
                 <ArrowBackIosIcon className={styles.icon} />
             </BackButtCont>
-            <LoginHeaderContainer>
-                <LoginHeader>Log In</LoginHeader>
-            </LoginHeaderContainer>
+            <SignUpHeaderContainer>
+                <SignUpHeader>Sign Up</SignUpHeader>
+            </SignUpHeaderContainer>
             <SocialMediaIcon />
             <Spacer/>
             <Spacer/>
@@ -121,18 +117,20 @@ export default function Login()
             </BreakLineCont>
             <Spacer />
             <Spacer />
-            <LogInFormCont>
+            <SignUpFormCont>
+                <TextField fullWidth label="Username" id="fullWidth" variant="filled" className={styles.ImBlacked}/>
+                <Spacer />
                 <TextField fullWidth label="Email" id="fullWidth" variant="filled" className={styles.ImBlacked}/>
                 <Spacer />
                 <TextField fullWidth label="Password" type="password" id="fullWidth" variant="filled" className={styles.ImBlacked}/>
-            </LogInFormCont>
-            <ForgotPass>Forgot Password?</ForgotPass>
-            <Spacer />
-            <Spacer />
-            <Spacer />
-            <Spacer />
-            <Button text="Continue"/>
-        </LoginContainer>
+                <Spacer />
+                <TextField fullWidth label="Confirm Password" type="password" id="fullWidth" variant="filled" className={styles.ImBlacked}/>
+            </SignUpFormCont>
+                <Spacer />
+                <Spacer />
+                <Spacer />
+            <Button text="Sign Up!"/>
+        </SignUpContainer>
         </MainCont>
     )
 }
