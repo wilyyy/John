@@ -6,8 +6,23 @@ import TaskCard from '@/Components/TaskCard';
 import JohnCalendar from '@/Components/Calendar';
 import Button from '@/Components/Button';
 import axios from "axios";
-import { useState } from 'react';
 
+const MyCard = (info) => {
+    console.log(info);
+    return <div></div>
+        style={{margin:10}}
+        status='basic'
+        header={<Text>{info.item.title}</Text>}
+        footer={<Text>{info.item.director}</Text>}>
+    </Card>
+}
+
+const GetFilms = async () => {
+    const result = await axios.get("https://ghibliapi.herokuapp.com/films");
+    console.log(result.data);
+    setFilms(result.data);
+    setLoad(false);
+}
 
 const CalendarCont = styled.div`
     display: flex;
