@@ -94,7 +94,7 @@ export default function Landing()
                     Track costs with an implemented cost splitter that allocates split costs to attendees. 
                     Get started for free now!
                 </Description>
-                <Button text="SIGN UP" fontsize="2rem"/>
+                <Button text="Create Event" text="SIGN UP" fontsize="2rem"/>
             </Col>
           </MidSection>
         </MainCont>
