@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import EventInfoCard from '@/Components/EventInfoCard'
 import TaskCard from '@/Components/TaskCard'
 import styled from 'styled-components';
