@@ -51,7 +51,7 @@ const LogInFormCont = styled.div`
 `
 
 const Spacer = styled.div`
-    padding: 10px;
+    padding: 5px;
 `
 
 const FatWhiteLine = styled.div`
@@ -60,10 +60,6 @@ height: 5px;
 width: 13rem;
 background-color: #FFFFFF;
 justify-content: row;
-`
-
-const ForgotPass = styled.h4`
-color: blue;
 `
 
 const BackButtCont = styled.div`
@@ -82,7 +78,7 @@ export default function Login()
                 <ArrowBackIosIcon className={styles.icon} />
             </BackButtCont>
             <LoginHeaderContainer>
-                <LoginHeader>Log In</LoginHeader>
+                <LoginHeader>Sign Up</LoginHeader>
             </LoginHeaderContainer>
             <SocialMediaIcon />
             <Spacer/>
@@ -95,15 +91,17 @@ export default function Login()
             <Spacer />
             <Spacer />
             <LogInFormCont>
+                <TextField fullWidth label="Username" id="fullWidth" variant="filled" className={styles.ImBlacked}/>
+                <Spacer />
                 <TextField fullWidth label="Email" id="fullWidth" variant="filled" className={styles.ImBlacked}/>
                 <Spacer />
                 <TextField fullWidth label="Password" type="password" id="fullWidth" variant="filled" className={styles.ImBlacked}/>
+                <Spacer />
+                <TextField fullWidth label="Confirm Password" type="password" id="fullWidth" variant="filled" className={styles.ImBlacked}/>
             </LogInFormCont>
-            <ForgotPass>Forgot Password?</ForgotPass>
-            <Spacer />
-            <Spacer />
-            <Spacer />
-            <Spacer />
+                <Spacer />
+                <Spacer />
+                <Spacer />
             <Button text="Continue"/>
         </LoginContainer>
     )
