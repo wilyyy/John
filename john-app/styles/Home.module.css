@@ -123,3 +123,7 @@
     flex-direction: column;
   }
 }
+
+.costTotal {
+  border: 1px solid red;
+}

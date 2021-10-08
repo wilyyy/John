@@ -1,7 +1,8 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import Button from '@/Components/Button'
+//import Button from '@/Components/Button'
+import { Button } from '@mui/material'
 import EventInfoCard from '@/Components/EventInfoCard'
 import Nav from '@/Components/Nav'
 import styled from 'styled-components'
@@ -66,14 +67,36 @@ const ButtonCont = styled.div
     justify-content: center;
 `
 
+const CostCont = styled.div
+`
+    border: 1px solid gray;
+    padding: 10px;
+    text-align: center;
+    font-size: 14pt;
+    color: gray;
+`
+
 export default function Home() {
     const [values, setValues] = React.useState({
-        amount: ''
+        amount: '',
+        people: ''
       });
 
     const handleChange = (prop) => (event) => {
         setValues({ ...values, [prop]: event.target.value });
     };
+
+    function CalculateCost(){
+        var numberofpeople = values.people;
+        var totalcost = values.amount;
+
+        var individualcost = totalcost / numberofpeople;
+        console.log(individualcost);
+
+        document.querySelector(".individcost").innerHTML = "$" + individualcost;
+        document.querySelector(".individcost").style.fontSize = "24pt";
+        document.querySelector(".individcost").style.color = "black";
+    }
 
     return (
       <HomeCont>
@@ -86,7 +109,14 @@ export default function Home() {
         <ContentCont>
             <Header>Cost Splitter</Header>
             <RoundedCont>
-                <TextField id="standard-basic" label="How many people?" variant="standard" color="primary" type="number" />
+                <Spacer />
+                <InputLabel>Number of People</InputLabel>
+                <Input
+                    id="number"
+                    type="number"
+                    value={values.people}
+                    onChange={handleChange('people')}
+                />
                 <Spacer />
                 <InputLabel htmlFor="standard-adornment-amount">Amount</InputLabel>
                 <Input
@@ -97,11 +127,16 @@ export default function Home() {
                 />
                 <Spacer />
                 <ButtonCont>
-                    <Button text="Calculate" fontsize="24pt" width="200px" height="50px" />
+                    {/* <Button text="Calculate" fontsize="24pt" width="200px" height="50px" onClick={CalculateCost} /> */}
+                    <Button
+                        variant="contained"
+                        size="large"
+                        onClick={CalculateCost}>Calculate</Button>
                 </ButtonCont>
                 <Spacer />
                 <SubHeader>Cost Per Attendee</SubHeader>
-                <TextField></TextField>
+                <CostCont className="individcost">Individual cost appears here...</CostCont>
+                <Spacer />
             </RoundedCont>
             </ContentCont>
       </HomeCont>
