@@ -4,6 +4,7 @@ import TaskCard from '@/Components/TaskCard'
 import styled from 'styled-components';
 import Nav from '@/Components/Nav'
 import axios from 'axios';
+import { useState, useEffect } from 'react';
 
 const ExampleCont = styled.div`
   display: flex;
@@ -29,8 +30,21 @@ const CalendarCont_2 = styled.div
   gap: 50px;
   padding:50px;
 `
-
 export default function Forecast() {
+
+  const [event, setEvents] = useState("");
+
+  useEffect(()=>{
+
+    const EventData = async () => {
+      const result = await axios.get('eventinfo.json');
+      console.log(result.data);
+      setEvents(result.data);
+    }
+
+    EventData();
+  }, [])
+
     return (
       <ExampleCont>
         <Head>
